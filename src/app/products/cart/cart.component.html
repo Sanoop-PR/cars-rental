@@ -1,0 +1,130 @@
+<app-header></app-header>
+
+<main id="body">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{products.vehicle_info.v_name}}</mat-card-title>
+      <mat-card-subtitle>{{products.vehicle_info.group}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <main class="productsView">
+        <section>
+          <img [src]="products.vehicle_info.image_url" alt="">
+        </section>
+        <section class="carDetails">
+          <div>
+            <p>Price : {{products.pricing_info.price}}</p>
+            <p>Doors : {{products.vehicle_info.doors}}</p>
+            <p>Seats : {{products.vehicle_info.seats}}</p>
+            <p>Transmission : {{products.vehicle_info.transmission}}</p>
+          </div>
+          <div>
+            <p>Fuel Type : {{products.vehicle_info.fuel_type}}</p>
+            <p>{{products.vehicle_info.suitcases.big}} Large Suitcase</p>
+            <p>{{products.vehicle_info.suitcases.small}} Small Suitcase</p>
+          </div>
+        </section>
+      </main>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="information">
+    <mat-card-content>
+      <section>
+        <h2>We give you the following for free</h2>
+        <p><mat-icon>check_circle</mat-icon> Free Cancellation</p>
+        <p><mat-icon>check_circle</mat-icon> 24/7 Customer Support</p>
+        <p><mat-icon>check_circle</mat-icon> Booking Amendments</p>
+      </section>
+      <section>
+        <h2>Plus your rental includes</h2>
+        <p><mat-icon>check_circle</mat-icon> Unlimited Mileage</p>
+        <p><mat-icon>check_circle</mat-icon> Meet and Greet</p>
+        <p><mat-icon>check_circle</mat-icon> Collision Damage Waiver</p>
+        <p><mat-icon>check_circle</mat-icon> Airport Fee</p>
+        <p><mat-icon>check_circle</mat-icon> VAT</p>
+        <p><mat-icon>check_circle</mat-icon> Third Party Liability (TPL)</p>
+        <p><mat-icon>check_circle</mat-icon> Theft Waiver (THW)</p>
+      </section>
+    </mat-card-content>
+  </mat-card>
+  
+  <mat-card class="user-form">
+    <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <section>
+          <div>
+            <mat-label>First Name</mat-label>
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="firstName" name="firstName">
+              <mat-error *ngIf="this.registerForm.get('firstName')?.errors&&this.registerForm.get('firstName')?.touched">
+                firstName is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-label>Last Name</mat-label>
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput formControlName="lastName" name="lastName">
+              <mat-error *ngIf="this.registerForm.get('lastName')?.errors&&this.registerForm.get('lastName')?.touched">
+                lastName is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-label>Mobile</mat-label>
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile</mat-label>
+              <input matInput formControlName="mobile" name="mobile">
+              <mat-error *ngIf="this.registerForm.get('mobile')?.errors&&this.registerForm.get('mobile')?.touched">
+                mobile is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-label>Email</mat-label>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" name="email">
+              <mat-error *ngIf="this.registerForm.get('email')?.errors&&this.registerForm.get('email')?.touched">
+                email is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </section>
+        <section>
+          <div>
+            <mat-label>Pick Up date/time</mat-label>
+            <div>
+              <mat-form-field appearance="outline" class="example-full-width">
+                <input matInput type="date" formControlName="PickDate" name="PickDate">
+              </mat-form-field>
+              <mat-form-field style="width: 80px;" appearance="outline" class="example-full-width">
+                <input matInput type="time" formControlName="PickTime" name="PickTime">
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <mat-label>Return date/time</mat-label>
+            <div>
+              <mat-form-field appearance="outline" class="example-full-width">
+                <input matInput type="date" formControlName="returnDate" name="returnDate">
+              </mat-form-field>
+              <mat-form-field style="width: 80px;" appearance="outline" class="example-full-width">
+                <input matInput type="time" formControlName="returnTime" name="returnTime">
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <button (click)="cancelFormBtn()" class="cancelBtn" type="button" mat-stroked-button color="warn">cancel</button>
+            <button (click)="openDialog()" class="rentBtn" type="submit" mat-raised-button color="primary">Rent Now</button>
+          </div>
+        </section>
+      </form>
+    </mat-card-content>
+  </mat-card>
+ 
+  
+</main>

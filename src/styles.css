@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/@angular//material/prebuilt-themes/deeppurple-amber.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Agdasima&family=Bacasime+Antique&family=Bruno+Ace&family=Bungee+Hairline&family=Carrois+Gothic+SC&family=Cinzel:wght@500&family=Cormorant+Upright:wght@500&family=Croissant+One&family=Expletus+Sans:ital@0;1&family=Faustina&family=Felipa&family=Glass+Antiqua&family=Iceland&family=Inconsolata&family=Jim+Nightshade&family=Kelly+Slab&family=Lalezar&family=Metal&family=Montez&family=Oleo+Script+Swash+Caps&family=Poppins&family=Roboto:ital,wght@1,300&family=Sarpanch:wght@500&family=Space+Mono&family=Yesteryear&display=swap');
+@import url('node_modules/ngx-toastr/toastr.css');
+
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  /* font-family: 'Aboreto', cursive; */
+/* font-family: 'Agdasima', sans-serif; */
+/* font-family: 'Bacasime Antique', serif; */
+/* font-family: 'Bruno Ace', cursive; */
+/* font-family: 'Bungee Hairline', cursive; */
+/* font-family: 'Carrois Gothic SC', sans-serif; */
+/* font-family: 'Cinzel', serif; */
+/* font-family: 'Cormorant Upright', serif; */
+/* font-family: 'Croissant One', cursive; */
+/* font-family: 'Expletus Sans', cursive; */
+/* font-family: 'Faustina', serif; */
+/* font-family: 'Felipa', cursive; */
+/* font-family: 'Glass Antiqua', cursive; */
+/* font-family: 'Iceland', cursive; */
+/* font-family: 'Inconsolata', monospace; */
+/* font-family: 'Jim Nightshade', cursive; */
+/* font-family: 'Kelly Slab', cursive; */
+/* font-family: 'Lalezar', cursive; */
+/* font-family: 'Metal', cursive; */
+/* font-family: 'Montez', cursive; */
+/* font-family: 'Oleo Script Swash Caps', cursive; */
+font-family: 'Poppins', sans-serif;
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Sarpanch', sans-serif; */
+/* font-family: 'Space Mono', monospace; */
+/* font-family: 'Yesteryear', cursive; */
+}

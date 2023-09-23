@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <section>
+    <span routerLink="" >Rent Car</span>
+  </section>
+  <!-- <section class="home">
+    <span>HOME</span>
+    <span>ABOUT US</span>
+    <span>CONTACT US</span>
+  </section> -->
+  <section>
+    <button routerLink="/wishlist" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button [matMenuTriggerFor]="beforeMenu" mat-icon-button class="example-icon"
+      aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </section>
+</mat-toolbar>
+<!-- menu -->
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item (click)="logout()">LOG OUT</button>
+  <button routerLink="/login" mat-menu-item>ACCOUNT</button>
+</mat-menu>

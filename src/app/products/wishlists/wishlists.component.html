@@ -1,0 +1,26 @@
+<app-header></app-header>
+<main>
+    <section *ngFor="let product of products">
+        <div class="container">
+            <div class="product-img">
+                <img [src]="product.p_image">
+            </div>
+            <div class="product-detail">
+                <div class="info">
+                    <span>{{product.p_rate}}</span>
+                    <h1>{{product.p_title}}</h1>
+                </div>
+                <div class="buttons">
+                    <!-- <button class="btn bookmark">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button> -->
+                    <button routerLink="/cart-product/{{product.p_id}}" class="btn cart">Rent Now</button>
+                    <button routerLink="/view-product/{{product.p_id}}" class="btn cart">Details</button>
+                    <button (click)="removeItem(product.p_id)" class="btn bookmark">
+                        <i class="fa-solid fa-heart-circle-minus"></i>                        <!-- <mat-icon>heart_minus</mat-icon> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

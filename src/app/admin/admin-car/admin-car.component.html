@@ -1,0 +1,17 @@
+<main>
+    <figure class="snip1218" *ngFor="let products of allProducts">
+        <div class="image">
+            <img [src]="products.vehicle_info.image_url" [alt]="products.vehicle_info.v_name"/>
+        </div>
+        <figcaption>
+          <h3><span> {{products.vehicle_info.v_name}}</span></h3>
+          <h5>price : {{products.pricing_info.price}}</h5>
+            <div class="icons">
+                <mat-icon (click)="deleteProduct(products.v_id)">delete_forever</mat-icon>
+                <mat-icon routerLink="/admin_car_edit/{{products.v_id}}">edit</mat-icon>
+                <mat-icon routerLink="/admin_view_car/{{products.v_id}}">visibility</mat-icon>
+            </div>
+        </figcaption>
+    </figure>
+    
+</main>

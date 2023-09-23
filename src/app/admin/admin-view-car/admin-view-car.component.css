@@ -1,0 +1,113 @@
+main{
+    /* background: black; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    /* background: linear-gradient(-140deg, #ff65c5, #fa909d, #fcce6c); */
+    color: #575556;
+    font-family: "Euclid Circular A", "Poppins";
+}
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 75vw;
+  max-width: 850px;
+  padding: 50px 30px 50px 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  border-radius: 24px;
+}
+
+.card img {
+  max-width: 280px;
+  width: 32vw;
+  height: 270px;
+  object-fit: cover;
+  margin-left: -60px;
+  margin-right: 40px;
+  border-radius: inherit;
+  background-color: white;
+}
+
+.card h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+.card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0 0 0 / 70%);
+  margin-bottom: 24px;
+}
+
+.card .buttons {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.card button {
+  border: 1px solid #a7a7a7;
+  background: transparent;
+  color: #a7a7a7;
+  font-family: inherit;
+  padding: 16px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  min-width: 120px;
+}
+
+.card button.primary {
+  background: #fe5c89;
+  color: #f9f9f9;
+  border: 0;
+}
+
+@media (width <= 720px) {
+  .card {
+    margin: 0 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .card h2 {
+    font-size: 30px;
+  }
+
+  .card img {
+    margin: -100px 0 30px 0;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+
+  .card button {
+    min-width: 160px;
+  }
+  section{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+main{
+    margin-top: 150px;
+}
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+section div p span{
+    font-size: .8rem;
+    float: right;
+}

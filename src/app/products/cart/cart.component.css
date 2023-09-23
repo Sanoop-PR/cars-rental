@@ -1,0 +1,65 @@
+#body{
+    background-color: rgb(228, 228, 228);
+    padding: 1rem;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+  
+
+.productsView{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.carDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.information{
+    margin-top: 20px;
+}
+.information>mat-card-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.information mat-icon{
+    color: yellowgreen;
+}
+.user-form{
+    margin-top: 20px;
+    padding: 2rem;
+}
+.user-form mat-card-content form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+.user-form>mat-card-content>form>section>div{
+    display: flex;
+    justify-content: space-between;
+}
+.cancelBtn:hover{
+    background-color: rgb(255, 69, 69);
+    color: white;
+    transition: 1s all;
+}
+.rentBtn:hover{
+    background-color: white;
+    color: rgb(100, 43, 255);
+    transition: 1s all;
+}
+
+
+@media screen and (max-width: 768px) {
+    .productsView,.information>mat-card-content,.user-form mat-card-content form{
+        grid-template-columns: 1fr;
+    }
+    
+}
+@media screen and (max-width:425px) {
+    .carDetails{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

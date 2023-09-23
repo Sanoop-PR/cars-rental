@@ -1,0 +1,9 @@
+.firstMain{
+    padding: 50px;
+    width: 500px;
+}
+.information>div, .informationBtn{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}

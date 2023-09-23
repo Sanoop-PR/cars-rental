@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>shield_person</mat-icon>
+    </button>
+    <span routerLink="/admin_dashboard" >ADMIN</span>
+    <span class="example-spacer"></span>
+    <button routerLink="/admin_car_add" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>directions_car</mat-icon>+
+    </button>
+    <button routerLink="/admin_user" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>person</mat-icon>
+    </button>
+    <button routerLink="/admin_message" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>comment</mat-icon>
+  </button>
+    <button [matMenuTriggerFor]="beforeMenu" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<!-- menu -->
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item (click)="logout()">LOG OUT</button>
+  <button routerLink="/login" mat-menu-item>LOGIN</button>
+</mat-menu>

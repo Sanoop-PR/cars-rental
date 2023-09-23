@@ -1,0 +1,54 @@
+<app-header></app-header>
+<main>
+    <div class="card">
+        <img [src]="products.vehicle_info.image_url" [alt]="products.vehicle_info.v_name"/>
+        <div>
+            <h2>{{ products.vehicle_info.v_name }}</h2>
+            <br>
+            <section>
+                <div>
+                    <p>
+                        Price :
+                        <span>{{ products.pricing_info.price }}</span>
+                    </p>
+                    <p>
+                        Discount : <span>{{ products.pricing_info.discount }}</span>
+                    </p>
+                    <p>
+                        Rate :
+                        <span>{{ products.rating_info.average }}
+                            {{ products.rating_info.average_text }}</span>
+                    </p>
+                    <p>
+                        Mileage :
+                        <span>{{products.vehicle_info.mileage}}</span>
+                    </p>
+                    <p>
+                        Accessibility :<span>{{ products.accessibility.transmission }}</span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Seats : <span>{{ products.vehicle_info.seats }}</span>
+                    </p>
+                    <p>
+                        Group : <span>{{ products.vehicle_info.group }}</span>
+                    </p>
+                    <p>
+                        Transmission : <span>{{ products.vehicle_info.transmission }}</span>
+                    </p>
+                    <p>
+                        Doors : <span>{{ products.vehicle_info.doors }}</span>
+                    </p>
+                    <p>
+                        Suitcases : <span>{{ products.vehicle_info.suitcases.big }}</span>
+                    </p>
+                </div>
+            </section>
+            <nav class="buttons">
+                <button (click)="wishlists(products)" class="primary">Add Wishlist</button>
+                <button routerLink="/cart-product/{{products.v_id}}">Rent Now</button>
+            </nav>
+        </div>
+    </div>
+</main>

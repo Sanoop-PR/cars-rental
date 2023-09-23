@@ -1,0 +1,40 @@
+<app-header></app-header>
+<header>
+    <img class="headerImg" src="https://img.freepik.com/free-photo/luxury-sport-car-with-xenon-lights-front-view_114579-5062.jpg?w=740&t=st=1688838389~exp=1688838989~hmac=2e68e90f44ae1e8d581fac48c7fca7b38f6e159cb1f8d68909ba21d27e7f1eec" alt="">
+    
+    <div class="wrapper">
+        <div class="containerW">
+          <h1 class="headTitle">Dream Car for Rental</h1>
+        </div>
+      </div>
+</header>
+<br><br>
+<main>
+    <section *ngFor="let products of allProducts">
+        <div class="container">
+            <div class="product-img">
+                <img [src]="products.vehicle_info.image_url" [alt]="products.vehicle_info.v_name">
+            </div>
+            <div class="product-detail">
+                <div class="info">
+                    <!-- {{products.rating_info.average}} -->
+                    <span></span>
+                    <h2 class="carName">
+                        {{products.vehicle_info.v_name}}
+                    </h2>
+                </div>
+                <div class="buttons">
+                    <!-- <button class="btn bookmark">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button> -->
+                    <button routerLink="cart-product/{{products.v_id}}" class="btn cart">Rent Now</button>
+                    <button routerLink="/view-product/{{products.v_id}}" class="btn cart">Details</button>
+                    <button (click)="wishlists(products)" class="btn bookmark">
+                        <i class="fa fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<app-footer></app-footer>

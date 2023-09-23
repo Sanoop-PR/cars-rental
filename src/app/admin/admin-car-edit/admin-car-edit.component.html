@@ -1,0 +1,121 @@
+<app-admin-header></app-admin-header>
+<main class="body">
+    <section class="body_section">
+        <h1>EDIT CAR DETAILS</h1>
+        <section class="body_section">
+            <form #editContactForm="ngForm">
+                <section class="form_section">
+                    <!-- car name -->
+                    <div>
+                        <mat-label>Car Name : </mat-label>
+                        <mat-form-field class="example-full-width">
+                            <input name="carName" #carName="ngModel" [(ngModel)]="products.vehicle_info.v_name" matInput>
+                        </mat-form-field>
+                    </div>
+                    <!-- car id -->
+                    <div>
+                        <mat-label>Car Id : </mat-label>
+                        <mat-form-field class="example-full-width">
+                            <input name="carId" #carId="ngModel" [(ngModel)]="products.v_id" matInput>
+                        </mat-form-field>
+                    </div>
+                    <!-- accessibility.transmission -->
+                    <div>
+                        <mat-label>Transmission : </mat-label>
+                        <mat-form-field>
+                            <select name="transmission" #transmission="ngModel" [(ngModel)]="products.accessibility.transmission" matNativeControl required>
+                                <option [value]="products.accessibility.transmission">{{products.accessibility.transmission}}</option>
+                              <option value="Manual">Manual gearbox</option>
+                              <option value="Automatic">Automatic gearbox</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <!-- seat -->
+                    <div>
+                        <mat-label>Seats : </mat-label>
+                        <mat-form-field class="example-full-width">
+                            <input name="seats" #seats="ngModel" [(ngModel)]="products.vehicle_info.seats" matInput>
+                        </mat-form-field>
+                    </div>
+                    <!-- Image -->
+                    <div>
+                        <mat-label>Image : </mat-label>
+                        <mat-form-field class="example-full-width">
+                            <input name="image" #image="ngModel" [(ngModel)]="products.vehicle_info.image_url" matInput>
+                        </mat-form-field>
+                    </div>
+                    <!-- Mileage -->
+                    <div>
+                        <mat-label>Mileage : </mat-label>
+                        <mat-form-field class="example-full-width">
+                            <input name="mileage" #mileage="ngModel" [(ngModel)]="products.vehicle_info.mileage" matInput>
+                        </mat-form-field>
+                    </div>
+                </section>
+                <section class="form_section">
+                    <!-- Suitcases -->
+                    <div>
+                        <mat-label>Suitcases : </mat-label>
+                        <div>
+                            <mat-form-field class="example-full-width">
+                                <input name="suitcaseBig" #suitcaseBig="ngModel" [(ngModel)]="products.vehicle_info.suitcases.big" matInput placeholder="Big">
+                            </mat-form-field>
+                            <br>
+                            <mat-form-field class="example-full-width">
+                                <input name="suitcaseSmall" #suitcaseSmall="ngModel" [(ngModel)]="products.vehicle_info.suitcases.small" matInput placeholder="small">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <!-- group -->
+                    <div>
+                        <mat-label>Group : </mat-label>
+                        <mat-form-field>
+                            <select name="group" #group="ngModel" [(ngModel)]="products.vehicle_info.group" matNativeControl required>
+                                <option [value]="products.vehicle_info.group">{{products.vehicle_info.group}}</option>
+                              <option value="Economy">Economy</option>
+                              <option value="Compact">Compact</option>
+                              <option value="Premium">Premium</option>
+                              <option value="Intermediate">Intermediate</option>
+                              <option value="Full-size">Full-size</option>
+                              <option value="Standard">Standard</option>
+                              <option value="Mini">Mini</option>
+                              <option value="Luxury">Luxury</option>
+                            </select>
+                        </mat-form-field>
+                    </div>
+                    <!-- Transmission -->
+                    <!-- <div>
+                        <mat-label>Transmission : </mat-label>
+                        <mat-form-field>
+                            <select matNativeControl required>
+                              <option value="volvo">Volvo</option>
+                              <option value="saab">Saab</option>
+                              <option value="mercedes">Mercedes</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                          </mat-form-field>
+                    </div> -->
+                    <!-- doors -->
+                    <div>
+                        <mat-label>Doors : </mat-label>
+                        <mat-form-field class="example-full-width">
+                            <input name="door" #door="ngModel" [(ngModel)]="products.vehicle_info.doors" matInput>
+                        </mat-form-field>
+                    </div>
+                    <!-- Price -->
+                    <div>
+                        <mat-label>Price : </mat-label>
+                        <mat-form-field class="example-full-width">
+                            <input name="price" #price="ngModel" [(ngModel)]="products.pricing_info.price" matInput>
+                        </mat-form-field>
+                    </div>
+                    <!-- buttons -->
+                    <div>
+                        <button mat-raised-button color="primary">CLOSE</button>
+                        <button type="submit" (click)="editProduct(products)" mat-raised-button color="warn">ADD</button>
+                    </div>
+                </section>
+            </form>
+        </section>
+    </section>
+</main>

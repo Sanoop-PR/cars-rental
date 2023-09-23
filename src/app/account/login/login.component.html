@@ -1,0 +1,26 @@
+<main>
+    <section class="box">
+        <form id="msform" [formGroup]="loginForm" (ngSubmit)="login()">
+            <!-- fieldsets -->
+            <fieldset>
+              <h2 class="fs-title">Login</h2>
+              <!-- username -->
+              <input id="username" formControlName="username" type="text" name="email" placeholder="Username" />
+              <!-- username validation -->
+              <mat-error *ngIf="this.loginForm.get('username')?.errors&&this.loginForm.get('username')?.touched">
+                Username is required
+              </mat-error>
+              <!-- password -->
+              <input type="password" name="password" placeholder="Password" formControlName="password"/>
+              <!-- password validation -->
+              <mat-error *ngIf="this.loginForm.get('password')?.errors&&this.loginForm.get('password')?.touched">
+                Password is required
+              </mat-error>
+              <input type="submit" name="next" class="next action-button" value="Login" />
+              <p>Not registered? <a routerLink="/register">Create an account</a></p>
+              <p><a routerLink="/admin_login">admin login</a></p>
+            </fieldset>
+          </form>
+    </section>
+
+</main>

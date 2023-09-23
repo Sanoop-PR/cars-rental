@@ -1,0 +1,33 @@
+<main class="firstMain" *ngIf="!showSuccess">
+    <section class="information">
+        <div>
+            <span>User Name :</span> <span>{{datas.registerForm.firstName}} {{datas.registerForm.lastName}}</span>
+        </div>
+        <div>
+            <span>Mobile :</span> <span>{{datas.registerForm.mobile}}</span>
+        </div>
+        <div>
+            <span>Email :</span> <span>{{datas.registerForm.email}}</span>
+        </div>
+        <div>
+            <span>Pick Data/Time :</span> <span>{{datas.registerForm.PickDate}} {{datas.registerForm.PickTime}}</span>
+        </div>
+        <div>
+            <span>Return Date/Time :</span> <span>{{datas.registerForm.returnDate}} {{datas.registerForm.returnTime}}</span>
+        </div>
+        <div>
+            <span>Total Price : </span> <span style="color:red;">{{carAmount}}</span>
+        </div>
+    </section>
+    <!-- pay pal -->
+    <section *ngIf="paymentSection">
+        <!-- <h1>paypal</h1> -->
+        <div>
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+        </div>
+    </section>
+    <div class="informationBtn" mat-dialog-actions>
+        <button [mat-dialog-close] color="warn" mat-button (click)="onNoClick()">No Thanks</button>
+        <button *ngIf="proceedBtnClick" (click)="proceed()" color="primary" mat-button cdkFocusInitial>Proceed</button>
+    </div>
+</main>
